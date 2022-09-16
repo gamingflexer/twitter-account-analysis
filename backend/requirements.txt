@@ -4,3 +4,4 @@ tensorflow
 pandas
 numpy
 flask
+deep_translator
