@@ -13,7 +13,8 @@ body {
 /*  for home page */
 
 #Home-page {
-    background-image: url("abc.png.jpeg");
+   /*  background-image: url('/backend/static/abc1.jpeg'); */
+   background-image: url("abc1.jpeg");
     height: 100%;
     width: 100%;
     background-size: cover;

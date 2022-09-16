@@ -29,7 +29,7 @@ def top_tweets(username):
 
     data = json.dumps(totalTweets[user])
     data_sorted = pd.read_json(data)
-    data_sorted = data_sorted.drop(['mentions', 'user_rt_id', 'user_rt', 'retweet_id', 'reply_to', 'retweet_date', 'trans_src',
+    data_sorted = data_sorted.drop(['mentions','created_at','date', 'user_rt_id', 'user_rt', 'retweet_id', 'reply_to', 'retweet_date', 'trans_src',
                      'trans_dest', 'cashtags', 'retweet', 'quote_url', 'place', 'conversation_id', 'id'], axis=1)
     print('\nTwitter data scrapped !\n')
-    return data_sorted.iloc.to_dict()
+    return data_sorted.to_dict()

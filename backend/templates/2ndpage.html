@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='2ndpage.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>2nd Page</title>
+  </head>
+  <body>
+    <section class="pie_chart_content">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="count_box">
+                <div class="form-group">
+                  <label for="Data-input">Total No.</label>
+                  <input
+                    type="text"
+                    value="10"
+                    class="total-no form-control"
+                    readonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Data-input">Bad </label>
+                  <input
+                    type="text"
+                    class="bad-input form-control"
+                    name="bad-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Data-input">Good</label>
+                  <input
+                    type="text"
+                    class="good-input form-control"
+                    name="good-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Data-input">Toxic</label>
+                  <input
+                    type="text"
+                    class="toxic-input form-control"
+                    name="toxic-input"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="main_box">
+                <h1>Pie chart</h1>
+              </div>
+              <canvas id="mychart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='2ndpage.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
