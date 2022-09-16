@@ -18,6 +18,14 @@ Link - ``` https://www.kaggle.com/competitions/jigsaw-toxic-comment-classificati
 
 Model link - ```https://drive.google.com/drive/folders/1--mapYkARlwpwYeu6oTxP7Ly2csH_AW5?usp=sharing ```
 
+# setup
+## Installation
+
+```
+pip install -r requirement.txt 
+
+```
+
 ## Backend - FLASK
 
 ## Fronted - HTML/CSS/JS
