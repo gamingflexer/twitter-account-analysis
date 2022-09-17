@@ -12,7 +12,7 @@ sample_data = {"mlModel": {'labels': ['toxic', 'severe_toxic', 'obscene', 'threa
     "username": "elonmusk",
     "name": "Elon Musk",
     "place": "",
-    "tweet": "@GailAlfarATX @Tesla @aelluswamy Beta expanding to safety scores above 80 after 10.69.2.1 goes out",
+    "tweet": ["@GailAlfarATX @Tesla @aelluswamy Beta expanding to safety scores above 80 after 10.69.2.1 goes out","tweet2"],
     "language": "en",
     "mentions": [],
     "urls": [],

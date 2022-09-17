@@ -34,7 +34,18 @@ def top_tweets(username):
                      'trans_dest', 'cashtags', 'retweet', 'quote_url', 'place', 'conversation_id', 'id'], axis=1)
     data_sorted['translated'] = data_sorted.apply(lambda x: g_translation_function_en(data_sorted['tweet']))
     print('\nTwitter data scrapped !\n')
-    return data_sorted.to_json(orient='records')
+    
+    data_return = data_sorted.to_json(orient='records')
+    
+    userinfo = data_return[0]
+    temp = tweet['tweet']
+    userinfo['tweet']= []
+    userinfo['tweet'].append(temp)
+    
+    for tweet in data_return:
+      userinfo['tweet'].append(tweet)
+      
+    return userinfo, data_return
 
 def g_translation_function_en(inText):
   try:
