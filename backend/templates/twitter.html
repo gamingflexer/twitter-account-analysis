@@ -25,6 +25,11 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="{{ url_for('static', filename='twitter.js')}}"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- JavaScript Bundle with Popper -->
 
     <title>Document</title>
@@ -93,11 +98,11 @@
             </nav>
           </div>
           <div class="main-tweets">
+            <p class="ml">
+              
+            </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              consequuntur sapiente cum dolore, magnam quis eveniet iure. Vero
-              natus, explicabo non soluta iure sed earum mollitia ab harum quae?
-              Molestias.
+              {{data.mlModel}}
             </p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -111,80 +116,8 @@
               unde nulla consectetur explicabo natus cumque amet deserunt?
               Commodi temporibus officia blanditiis dolorum repellendus.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae vitae, laudantium aut quam autem exercitationem minus
-              unde nulla consectetur explicabo natus cumque amet deserunt?
-              Commodi temporibus officia blanditiis dolorum repellendus.
-            </p>
-            <div class="overlay">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="count_box">
-                      <div class="form-group">
-                        <label for="Data-input">Total No.</label>
-                        <input
-                          type="text"
-                          value="10"
-                          class="total-no form-control"
-                          readonly
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="Data-input">toxic </label>
-                        <input
-                          type="text"
-                          class="toxic-input form-control"
-                          name="toxic-input"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="Data-input">severe_toxic</label>
-                        <input
-                          type="text"
-                          class="severe-input form-control"
-                          name="severe-input"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="Data-input">obscene</label>
-                        <input
-                          type="text"
-                          class="obscene-input form-control"
-                          name="obscene-input"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="Data-input">Threat</label>
-                        <input
-                          type="text"
-                          class="threat-input form-control"
-                          name="threat-input"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="Data-input">insult</label>
-                        <input
-                          type="text"
-                          class="insult-input form-control"
-                          name="insult-input"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="Data-input">identity_hate</label>
-                        <input
-                          type="text"
-                          class="identity-input form-control"
-                          name="identity-input"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+           </div>
+
         </div>
         <div class="col-lg-5 column">
           <div class="main_box">
@@ -197,11 +130,30 @@
       </div>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ url_for('static', filename='twitter.js')}}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+      var tweetdata = JSON.parse('{{data|safe}}');
+      const data1 = tweetdata.mlModel;
+
+      const ctx = document.getElementById('mychart').getContext('2d');
+      let myChart = new Chart(ctx, {
+      type: "doughnut",
+      data: {
+
+            labels: data1.labels,
+            datasets: [
+                {
+                    label: '# of votes',
+                    data: data1.data,
+                    backgroundColor: ['#2adece', '#dd3b79', 'red', 'black', 'yellow', 'green'],
+                    borderWidth: 1,
+                    cutout: "90%"
+                }
+            ]
+            },
+});
+
+    </script>
+    
   </body>
 
   <h3>{{data}}</h3>

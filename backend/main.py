@@ -15,14 +15,15 @@ def home():
 
 @app.route('/twitter', methods=['GET', 'POST'])
 def twitter():
-    username = request.form['twitter']
-    print(username)
-    # try:
-    #     data = json.loads(top_tweets([username]))
-    # except FileNotFoundError:
-    #     data = json.loads(top_tweets([username]))
-    # return render_template('twitter.html', data=json.dumps(data[:2]))
-    return render_template('twitter.html', data = sample_data)
+    if request.method == 'POST':
+        username = request.form.get('twitter')
+        print(username)
+        return render_template('twitter.html', data=json.dumps(sample_data))
+        # try:
+        #     data = json.loads(top_tweets([username]))
+        # except FileNotFoundError:
+        #     data = json.loads(top_tweets([username]))
+        # return render_template('twitter.html', data=json.dumps(data[:2]))
 
 
 if __name__ == '__main__':
