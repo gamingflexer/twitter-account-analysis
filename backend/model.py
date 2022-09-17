@@ -81,5 +81,4 @@ def predict_text_class(text,MAX_LEN=64):
   for i, (token_ids, masks) in enumerate(test_dataset):
     predictions = MODEL_BERT2(token_ids, attention_mask=masks).numpy()
     predictionDict = dict(zip(label_cols,predictions[0]))
-    print("\n")
     return predictionDict
