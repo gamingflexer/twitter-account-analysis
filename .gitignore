@@ -130,3 +130,5 @@ dmypy.json
 
 backend/models/
 backend/data/*.json
+test.ipynb
+python/train-1.csv

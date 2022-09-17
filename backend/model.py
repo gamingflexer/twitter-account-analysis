@@ -2,12 +2,15 @@ import os
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+from config import modelpath
 from transformers import TFBertModel
 from transformers import BertTokenizer
 from tensorflow.keras.layers import Dense, Flatten
 from keras_preprocessing.sequence import pad_sequences
 
 from constants import label_cols
+
+predictionArrray = []
 
 class BertClassifier(tf.keras.Model):    
     def __init__(self, bert: TFBertModel, num_classes: int):
@@ -27,13 +30,13 @@ class BertClassifier(tf.keras.Model):
                 
         return cls_output
 
-MODEL_PATH_BERT2 = './model/bert_toxic_2/'
+MODEL_PATH_BERT2 = modelpath + '/'
 
 MODEL_BERT2 = BertClassifier(TFBertModel.from_pretrained('bert-base-uncased'), len(label_cols))
 MODEL_BERT2.load_weights(MODEL_PATH_BERT2)
 tokenizer_BERT2 = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
 
-print("\BERT MULTI MODEL LOADDED\n")
+print("\n BERT MULTI MODEL LOADDED \n")
 
 def tokenize_sentences_multiclass(sentences, tokenizer, max_seq_len = 128):
     tokenized_sentences = []
@@ -76,6 +79,7 @@ def predict_text_class(text,MAX_LEN=64):
   test_attention_masks = create_attention_masks(test_input_ids)
   test_dataset = create_dataset_multiclass((test_input_ids, test_attention_masks), batch_size=1, train=False, epochs=1)
   for i, (token_ids, masks) in enumerate(test_dataset):
-    #sample_ids = df_test.iloc[i*TEST_BATCH_SIZE:(i+1)*TEST_BATCH_SIZE]['id']
     predictions = MODEL_BERT2(token_ids, attention_mask=masks).numpy()
-    return predictions[0]
+    predictionDict = dict(zip(label_cols,predictions[0]))
+    print("\n")
+    return predictionDict
