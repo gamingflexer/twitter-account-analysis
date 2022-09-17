@@ -1,5 +1,5 @@
 from flask import Flask,render_template
-""" from twiiter import top_tweets """
+from twiiter import top_tweets
 import json
 
 app = Flask(__name__, static_folder='static')
@@ -15,13 +15,13 @@ def secondpage():
     return render_template('twitter.html')
 
 
-""" @app.route('/twitter=<username>')
+@app.route('/twitter=<username>')
 def twitter(username):
     try:
         data = json.loads(top_tweets([username]))
     except FileNotFoundError:
         data = json.loads(top_tweets([username]))
-    return json.dumps(data[:2]) """
+    return json.dumps(data[:2])
 
 
 if __name__ == '__main__':
