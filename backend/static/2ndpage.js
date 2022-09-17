@@ -1,22 +1,27 @@
-const bad = document.querySelector('.bad-input');
-const good = document.querySelector('.good-input');
 const toxic = document.querySelector('.toxic-input');
+const severe_toxic = document.querySelector('.severe-input');
+const obscene = document.querySelector('.obscene-input');
+const threat = document.querySelector('.threat-input');
+const insult = document.querySelector('.insult-input');
+const identity_hate = document.querySelector('.identity-input');
+
 
 const ctx = document.getElementById('mychart').getContext('2d');
 let myChart = new Chart(ctx, {
-    type: 'doughnut',
+    type: "doughnut",
     data: {
 
-        labels: ['Bad', 'Good', 'Toxic'],
+        labels: ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate'],
         datasets: [
             {
                 label: '# of votes',
-                data: [0, 0, 0],
-                backgroundColor: ['#2adece', '#dd3b79', 'red'],
-                borderWidth: 1
+                data: [0, 0, 0, 0, 0, 0],
+                backgroundColor: ['#2adece', '#dd3b79', 'red', 'black', 'yellow', 'green'],
+                borderWidth: 1,
+                cutout: "75%"
             }
         ]
-    }
+    },
 });
 
 const updateChartValue = (input, dataOrder) => {
@@ -26,6 +31,9 @@ const updateChartValue = (input, dataOrder) => {
     });
 };
 
-updateChartValue(bad, 0);
-updateChartValue(good, 1);
-updateChartValue(toxic, 2);
+updateChartValue(toxic, 0);
+updateChartValue(severe_toxic, 1);
+updateChartValue(obscene, 2);
+updateChartValue(threat, 3);
+updateChartValue(insult, 4);
+updateChartValue(identity_hate, 5);

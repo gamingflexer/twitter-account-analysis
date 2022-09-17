@@ -8,71 +8,192 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='2ndpage.css')}}"
     />
+    <!-- CSS only -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
 
-    <title>2nd Page</title>
+    <title>Document</title>
   </head>
   <body>
-    <section class="pie_chart_content">
-      <div class="overlay">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="count_box">
-                <div class="form-group">
-                  <label for="Data-input">Total No.</label>
-                  <input
-                    type="text"
-                    value="10"
-                    class="total-no form-control"
-                    readonly
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="Data-input">Bad </label>
-                  <input
-                    type="text"
-                    class="bad-input form-control"
-                    name="bad-input"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="Data-input">Good</label>
-                  <input
-                    type="text"
-                    class="good-input form-control"
-                    name="good-input"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="Data-input">Toxic</label>
-                  <input
-                    type="text"
-                    class="toxic-input form-control"
-                    name="toxic-input"
-                  />
-                </div>
-              </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="d-flex flex-grow-1">
+        <a href="/" class="navbar-brand">Codeply</a>
+        <form class="mr-5 my-auto w-100 d-inline-block order-1"></form>
+      </div>
+      <button
+        class="navbar-toggler order-0"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar7"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="aa">
+      <div
+        class="navbar-collapse collapse flex-shrink-1 flex-grow-0 order-last"
+        id="navbar7"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Contact-us</a>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </nav>
+    <section id="twitter-profile">
+      <div class="row">
+        <div class="col-lg-7 column">
+          <div class="cover-profile"></div>
+          <span class="dot main-profile"></span>
+          <div class="tw">
+            <div class="name">
+              <h4>Name</h4>
+              <h5>Twitter-id</h5>
             </div>
-            <div class="col-md-6">
-              <div class="main_box">
-                <h1>Pie chart</h1>
+            <div class="twe">
+              <span>0 Followers </span>
+              <span> 0 Followings</span>
+            </div>
+          </div>
+          <div class="row tweets">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">Tweets</a>
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#"
+                      >Tweets and Replies <span class="sr-only"></span
+                    ></a>
+                  </li>
+                </ul>
               </div>
-              <canvas id="mychart"></canvas>
+            </nav>
+          </div>
+          <div class="main-tweets">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              consequuntur sapiente cum dolore, magnam quis eveniet iure. Vero
+              natus, explicabo non soluta iure sed earum mollitia ab harum quae?
+              Molestias.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae vitae, laudantium aut quam autem exercitationem minus
+              unde nulla consectetur explicabo natus cumque amet deserunt?
+              Commodi temporibus officia blanditiis dolorum repellendus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae vitae, laudantium aut quam autem exercitationem minus
+              unde nulla consectetur explicabo natus cumque amet deserunt?
+              Commodi temporibus officia blanditiis dolorum repellendus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae vitae, laudantium aut quam autem exercitationem minus
+              unde nulla consectetur explicabo natus cumque amet deserunt?
+              Commodi temporibus officia blanditiis dolorum repellendus.
+            </p>
+            <div class="overlay">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="count_box">
+                      <div class="form-group">
+                        <label for="Data-input">Total No.</label>
+                        <input
+                          type="text"
+                          value="10"
+                          class="total-no form-control"
+                          readonly
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="Data-input">toxic </label>
+                        <input
+                          type="text"
+                          class="toxic-input form-control"
+                          name="toxic-input"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="Data-input">severe_toxic</label>
+                        <input
+                          type="text"
+                          class="severe-input form-control"
+                          name="severe-input"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="Data-input">obscene</label>
+                        <input
+                          type="text"
+                          class="obscene-input form-control"
+                          name="obscene-input"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="Data-input">Threat</label>
+                        <input
+                          type="text"
+                          class="threat-input form-control"
+                          name="threat-input"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="Data-input">insult</label>
+                        <input
+                          type="text"
+                          class="insult-input form-control"
+                          name="insult-input"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="Data-input">identity_hate</label>
+                        <input
+                          type="text"
+                          class="identity-input form-control"
+                          name="identity-input"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-lg-5 column">
+          <div class="main_box">
+            <h1>Pie chart</h1>
+          </div>
+          <canvas id="mychart"></canvas>
+        </div>
       </div>
     </section>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ url_for('static', filename='2ndpage.js')}}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

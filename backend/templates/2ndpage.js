@@ -1,16 +1,12 @@
+const bad = document.querySelector('.bad-input');
+const good = document.querySelector('.good-input');
 const toxic = document.querySelector('.toxic-input');
-const severe_toxic = document.querySelector('.severe-input');
-const obscene = document.querySelector('.obscene-input');
-const threat = document.querySelector('.threat-input');
-const insult = document.querySelector('.insult-input');
-const identity_hate = document.querySelector('.identity-input');
+
+
 
 const ctx = document.getElementById('mychart').getContext('2d');
 let myChart = new Chart(ctx, {
-    type: "doughnut",
-    indexLabelPlacement: "outside",
-    radius: "90%",
-    innerRadius: "75%",
+    type: 'doughnut',
     data: {
 
         labels: ['Bad', 'Good', 'Toxic'],

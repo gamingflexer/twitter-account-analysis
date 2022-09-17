@@ -7,9 +7,15 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    width: 100%;
 }
 
-
+.navbar{
+    display: flex;
+}
+.container-fluid{
+    display: flex;
+}
 /*  for home page */
 
 #Home-page {
@@ -138,6 +144,7 @@ nav ul li {
     padding: 100px 0;
 }
 
+
 #services .service-top {
     max-width: 300px;
     margin: 0 auto;
@@ -224,3 +231,10 @@ nav ul li {
     color: beige;
     font-size: 20px;
 }
+/* 
+.container-fluid{
+    display: flex;
+}
+.navbar-side{
+    display: flex;
+} */

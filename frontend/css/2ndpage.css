@@ -11,8 +11,12 @@ body{
     background-image: url("https://scandiononcology.com/wp-content/uploads/2018/iStock-673266772-jpg");
     color: white;
 }
-#mychart{
-    margin-bottom: 200px;
+#myChartDiv{
+  
+    width: 100%;
+    height: 300px;
+
+    /* margin-bottom: 200px; */
 }
 .overlay{
     background-color: #09162e;
