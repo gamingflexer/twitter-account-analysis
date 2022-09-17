@@ -18,7 +18,7 @@ def twitter():
     if request.method == 'POST':
         username = request.form.get('twitter')
         print(username)
-        return render_template('twitter.html', data=json.dumps(sample_data))
+        return render_template('twitter.html', data=json.dumps(sample_data),data2=sample_data['userData'] )
         # try:
         #     data = json.loads(top_tweets([username]))
         # except FileNotFoundError:

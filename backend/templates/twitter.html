@@ -35,9 +35,10 @@
     <title>Document</title>
   </head>
   <body>
+    
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <div class="d-flex flex-grow-1">
-        <a href="/" class="navbar-brand">Codeply</a>
+        <a href="/" class="navbar-brand">Twitter</a>
         <form class="mr-5 my-auto w-100 d-inline-block order-1"></form>
       </div>
       <button
@@ -55,13 +56,7 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Contact-us</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
         </ul>
       </nav>
@@ -74,8 +69,8 @@
           <span class="dot main-profile"></span>
           <div class="tw">
             <div class="name">
-              <h4>Name</h4>
-              <h5>Twitter-id</h5>
+              <h4>{{data2.name}}</h4>
+              <h5>{{data2.username}}</h5>
             </div>
             <div class="twe">
               <span>0 Followers </span>
@@ -85,16 +80,6 @@
           <div class="row tweets">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <a class="navbar-brand" href="#">Tweets</a>
-
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#"
-                      >Tweets and Replies <span class="sr-only"></span
-                    ></a>
-                  </li>
-                </ul>
-              </div>
             </nav>
           </div>
           <div class="main-tweets">
@@ -105,10 +90,7 @@
               {{data.mlModel}}
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae vitae, laudantium aut quam autem exercitationem minus
-              unde nulla consectetur explicabo natus cumque amet deserunt?
-              Commodi temporibus officia blanditiis dolorum repellendus.
+             
             </p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

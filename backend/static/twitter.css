@@ -74,14 +74,21 @@ h5{
     padding-left: 100px;
 
 }
+.navbar-nav li{
+    padding-left: -20px;
+}
+.navbar-brand{
+    font-size: 52px;
+    margin-left: 20px;
+    color: #ffff;
+}
 .nav-link{
     margin-left: 130px;
 }
 
 .main-tweets{
     box-sizing: border-box;
-    border-top: 2px solid;
-    border-right: 2px solid;
+    margin-left: 105px;
 }
 
 
