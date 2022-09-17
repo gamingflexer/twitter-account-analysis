@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='2ndpage.css')}}"
+      href="{{ url_for('static', filename='twitter.css')}}"
     />
     <!-- CSS only -->
     <link
@@ -188,14 +188,17 @@
         </div>
         <div class="col-lg-5 column">
           <div class="main_box">
-            <h1>Pie chart</h1>
-          </div>
+            <h1 class="pie">Pie chart</h1>
+          
+          <div class="mychartdiv">
           <canvas id="mychart"></canvas>
         </div>
       </div>
+      </div>
+      </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ url_for('static', filename='2ndpage.js')}}"></script>
+    <script src="{{ url_for('static', filename='twitter.js')}}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

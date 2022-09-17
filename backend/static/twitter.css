@@ -9,7 +9,14 @@
 .nav-link{
     margin-right: 50px;
 }
-
+/* #mychart{
+    height: 200px;
+    width: 200px;
+} */
+.mychartdiv{
+    height: 400px;
+    width: 400px;
+}
 .cover-profile{
     width: 805px;
     height: 200px;
@@ -78,7 +85,13 @@ h5{
 }
 
 
-
+.main_box{
+    margin-top: 150px;
+    padding-left: 50px;
+}
+.pie{
+    margin-bottom: 50px;
+}
 
 
 

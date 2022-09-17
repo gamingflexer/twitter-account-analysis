@@ -1,5 +1,4 @@
 body {
-    /* background-image: url("abc.png.jpeg"); */
     background-size: 100%;
 }
 
@@ -10,17 +9,15 @@ body {
     width: 100%;
 }
 
-.navbar{
-    display: flex;
-}
-.container-fluid{
-    display: flex;
-}
+
 /*  for home page */
 
+.container-fluid {
+    display: flex;
+}
+
 #Home-page {
-   /*  background-image: url('/backend/static/abc1.jpeg'); */
-   background-image: url("abc1.jpeg");
+    background-image: url("abc1.jpeg");
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -108,17 +105,19 @@ nav ul {
     color: rgb(235, 240, 245);
     list-style-type: none;
     float: right;
-    margin-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    padding-left: 620px;
 }
 
 nav ul li {
     display: inline-block;
     list-style-type: none;
-    padding: 10px;
     text-decoration: none;
     background-color: none;
     color: #fff;
     font-size: large;
+    display: flex;
 }
 
 .navbar-side a {
@@ -143,7 +142,6 @@ nav ul li {
     margin: 0 auto;
     padding: 100px 0;
 }
-
 
 #services .service-top {
     max-width: 300px;
@@ -171,7 +169,6 @@ nav ul li {
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
-    background-image: url(./img/img-1.png);
     background-size: cover;
     margin: 10px 5%;
     position: relative;
@@ -231,10 +228,3 @@ nav ul li {
     color: beige;
     font-size: 20px;
 }
-/* 
-.container-fluid{
-    display: flex;
-}
-.navbar-side{
-    display: flex;
-} */

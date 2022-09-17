@@ -1,5 +1,4 @@
 body {
-    /* background-image: url("abc.png.jpeg"); */
     background-size: 100%;
 }
 
@@ -7,13 +6,18 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    width: 100%;
 }
 
 
 /*  for home page */
 
+.container-fluid {
+    display: flex;
+}
+
 #Home-page {
-    background-image: url('/frontend/images/abc1.jpeg');
+    background-image: url("/frontend/images/abc1.jpeg");
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -101,17 +105,19 @@ nav ul {
     color: rgb(235, 240, 245);
     list-style-type: none;
     float: right;
-    margin-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    padding-left: 620px;
 }
 
 nav ul li {
     display: inline-block;
     list-style-type: none;
-    padding: 10px;
     text-decoration: none;
     background-color: none;
     color: #fff;
     font-size: large;
+    display: flex;
 }
 
 .navbar-side a {
