@@ -28,4 +28,10 @@ pip install -r requirement.txt
 
 ## Backend - FLASK
 
+```
+cd backend
+python main.py
+
+```
+
 ## Fronted - HTML/CSS/JS

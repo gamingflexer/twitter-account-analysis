@@ -1,2 +1,35 @@
 label_cols = ['toxic', 'severe_toxic', 'obscene', 'threat',
-       'insult', 'identity_hate']
+              'insult', 'identity_hate']
+
+sample_data = {"mlModel": {'labels': ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate'], 'data': [3.3537470735609523, 0.22055037552490703, 0.934887211769819, 0.457239768002181, 0.417689303867518, 0.17944169230759102]}, "userData": {
+    "id": 1570441171431985152,
+    "conversation_id": "1570427858371379204",
+    "created_at": "2022-09-15 21:25:27 IST",
+    "date": "2022-09-15",
+    "time": "21:25:27",
+    "timezone": "+0530",
+    "user_id": 44196397,
+    "username": "elonmusk",
+    "name": "Elon Musk",
+    "place": "",
+    "tweet": "@GailAlfarATX @Tesla @aelluswamy Beta expanding to safety scores above 80 after 10.69.2.1 goes out",
+    "language": "en",
+    "mentions": [],
+    "urls": [],
+    "photos": [],
+    "replies_count": 1057,
+    "retweets_count": 843,
+    "likes_count": 4653,
+    "hashtags": [],
+    "cashtags": [],
+    "link": "https://twitter.com/elonmusk/status/1570441171431985152",
+    "quote_url": "",
+    "video": 0,
+    "thumbnail": "",
+    "near": "",
+    "geo": "",
+    "source": "",
+    "user_rt_id": "",
+    "user_rt": "",
+    "retweet_id": ""
+}}
