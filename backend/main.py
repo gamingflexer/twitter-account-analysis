@@ -3,6 +3,7 @@ from twiiter import top_tweets
 import json
 from flask import Flask, request
 from constants import sample_data
+from ranking import pie_chart_rank
 
 app = Flask(__name__, static_folder='static')
 
@@ -11,20 +12,22 @@ app = Flask(__name__, static_folder='static')
 def home(): 
     return render_template('home_page.html')
 
-
-
 @app.route('/twitter', methods=['GET', 'POST'])
 def twitter():
-    if request.method == 'POST':
-        username = request.form.get('twitter')
-        print(username)
-        return render_template('twitter.html', data=json.dumps(sample_data),data2=sample_data['userData'])
-        # try:
-        #     data = json.loads(top_tweets([username]))
-        # except FileNotFoundError:
-        #     data = json.loads(top_tweets([username]))
-        # return render_template('twitter.html', data=json.dumps(data[:2]))
+    # if request.method == 'POST':
+    username = request.form['search_box1']
+    print(username)
+    #return render_template('twitter.html', data=json.dumps(sample_data),data2=sample_data['userData'])
+    try:
+        userdata,tweets = top_tweets([username])
+        data = json.loads(tweets)
+    except FileNotFoundError:
+        userdata,tweets = top_tweets([username])
+        data = json.loads(tweets)
+    pie_chart_data = {}
+    pie_chart_data['mlModel'] = pie_chart_rank(data)
+    return render_template('twitter.html', data=json.dumps(pie_chart_data),data2=userdata)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
