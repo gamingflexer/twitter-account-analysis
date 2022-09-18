@@ -24,7 +24,7 @@ def top_tweets(username):
     totalTweets = {}
     for user in username:
         tweets = []
-        for line in open(path, 'r'):
+        for line in open(path, 'r', encoding="utf8"):
             tweets.append(json.loads(line))
             totalTweets[user] = tweets
 
