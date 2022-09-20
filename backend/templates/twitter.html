@@ -25,6 +25,7 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- <script src="{{ url_for('static', filename='twitter.js')}}"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -72,39 +73,139 @@
               <h4>{{data2.name}}</h4>
               <h5>{{data2.username}}</h5>
             </div>
-            <div class="twe">
-              <span>0 Followers </span>
-              <span> 0 Followings</span>
-            </div>
+            
           </div>
           <div class="row tweets">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar">
               <a class="navbar-brand" href="#">Tweets</a>
             </nav>
           </div>
           <div class="main-tweets">
-            <p class="ml">
-              
-            </p>
             <p>
-              {{data.mlModel}}
-            </p>
-            <p>
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
              {{data2.tweet[0]}}
+
+             <div class="icons"> 
+              
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+            </div>
             </p>
             <p>
-              {{data2.tweet[2]}}
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[2]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count[2]}} 
+              ⇆  {{data2.retweets_count[2]}} 
+              🤍 {{data2.likes_count[2]}}
+            </div>
             </p>
             <p>
-              {{data2.tweet[3]}}
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[3]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+              
+            </div>
             </p>
             <p>
-              {{data2.tweet[4]}}
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[4]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+            </div>
+            </p>
+            <p>
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[5]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+            </div>
+            </p>
+            <p>
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[6]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+            </div>
+            </p>
+            <p>
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[7]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+            </div>
+            </p>
+            <p>
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[8]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+            </div>
+            </p>
+            <p>
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[9]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+            </div>
+            </p>
+            <p>
+              <h6>{{data2.name}}
+                {{data2.username}} {{data2.date}}</h6>
+             {{data2.tweet[10]}}
+
+             <div class="icons"> 
+             
+              ⮐  {{data2.replies_count}} 
+              ⇆  {{data2.retweets_count}} 
+              🤍 {{data2.likes_count}}
+            </div>
             </p>
            </div>
 
         </div>
-        <div class="col-lg-5 column">
+        <div class="col-lg-5 ">
           <div class="main_box">
             <h1 class="pie">Pie chart</h1>
           
@@ -140,6 +241,7 @@
     </script>
     
   </body>
-
+<h3>{{data}}</h3> 
+<h3>{{data2}}</h3> 
 
 </html>

@@ -1,9 +1,25 @@
+body{
+    background-color: #3cadf4;
+    color: white;
+}
+p{
+   /*  border-bottom: 2px #AEA9A9 solid ; */
 
+}
+.icons{
+    padding-top: 12px;
+    border-bottom: 2px #AEA9A9 solid ;
+}
 #twitter-profile{
     box-sizing: border-box;
+    background-color: #3cadf4;
+    color: white;
 }
 .row{
     width: 100%;
+}
+.column{
+    border-right: 2px #AEA9A9 solid;
 }
 
 .nav-link{
@@ -18,7 +34,7 @@
     width: 400px;
 }
 .cover-profile{
-    width: 805px;
+    width: 1519px;
     height: 200px;
     left: 0px;
     background: #D9D9D9;
@@ -70,7 +86,7 @@ h5{
     margin-right: 180px;
 }
 .tweets{
-    padding-top: 260px;
+    padding-top: 220px;
     padding-left: 100px;
 
 }
@@ -88,16 +104,18 @@ h5{
 
 .main-tweets{
     box-sizing: border-box;
+   /*  border-right: 1px #AEA9A9 solid; */
     margin-left: 105px;
+    margin-right: -13px;
 }
 
 
 .main_box{
-    margin-top: 150px;
-    padding-left: 50px;
+    margin-top: 210px;
+    padding-left: 120px;
 }
 .pie{
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 
