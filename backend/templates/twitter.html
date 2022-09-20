@@ -81,129 +81,24 @@
             </nav>
           </div>
           <div class="main-tweets">
+           {% for tweet in data2 %}
+           <!-- {{tweet}} -->
             <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[0]}}
+              <h6>{{tweet.name}}
+                {{tweet.username}}</h6>
+             {{tweet.tweet}}
 
              <div class="icons"> 
               
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
+              ⮐  {{tweet.replies_count}} 
+              ⇆  {{tweet.retweets_count}} 
+              🤍 {{tweet.likes_count}}
             </div>
+           
             </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[2]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count[2]}} 
-              ⇆  {{data2.retweets_count[2]}} 
-              🤍 {{data2.likes_count[2]}}
-            </div>
-            </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[3]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
-              
-            </div>
-            </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[4]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
-            </div>
-            </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[5]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
-            </div>
-            </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[6]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
-            </div>
-            </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[7]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
-            </div>
-            </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[8]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
-            </div>
-            </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[9]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
-            </div>
-            </p>
-            <p>
-              <h6>{{data2.name}}
-                {{data2.username}} {{data2.date}}</h6>
-             {{data2.tweet[10]}}
-
-             <div class="icons"> 
-             
-              ⮐  {{data2.replies_count}} 
-              ⇆  {{data2.retweets_count}} 
-              🤍 {{data2.likes_count}}
-            </div>
-            </p>
+            
+           {% endfor %}
            </div>
-
         </div>
         <div class="col-lg-5 ">
           <div class="main_box">
@@ -241,7 +136,6 @@
     </script>
     
   </body>
-<h3>{{data}}</h3> 
-<h3>{{data2}}</h3> 
+
 
 </html>

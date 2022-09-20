@@ -1,25 +1,22 @@
 body{
     background-color: #3cadf4;
-    color: white;
+    color: black;
 }
-p{
-   /*  border-bottom: 2px #AEA9A9 solid ; */
 
-}
 .icons{
     padding-top: 12px;
-    border-bottom: 2px #AEA9A9 solid ;
+    border-bottom: 1px whitesmoke solid ;
 }
 #twitter-profile{
     box-sizing: border-box;
-    background-color: #3cadf4;
-    color: white;
+    background-color: lightblue;
+    color: black;
 }
 .row{
     width: 100%;
 }
 .column{
-    border-right: 2px #AEA9A9 solid;
+    border-right: 1px whitesmoke solid;
 }
 
 .nav-link{
@@ -37,7 +34,7 @@ p{
     width: 1519px;
     height: 200px;
     left: 0px;
-    background: #D9D9D9;
+    background: url('cover.png');
 }
 
 
@@ -48,10 +45,10 @@ p{
   position: absolute;
   left: 80px;
   top: 200px;
-  background: #AEA9A9;
+  background: url('tweet.png');
   height: 200px;
   width: 200px;
-  background-color: #bbb;
+  
   border-radius: 50%;
   display: inline-block;
 }
@@ -78,6 +75,7 @@ h4{
 }
 .name{
     padding-right: 180px;
+    color: #000000;
 }
 h5{
     margin-right: 100px;

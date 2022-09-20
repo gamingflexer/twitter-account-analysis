@@ -3,7 +3,7 @@ from twiiter import top_tweets
 import json
 from flask import Flask, request
 from constants import sample_data
-# from ranking import pie_chart_rank
+#from ranking import pie_chart_rank
 
 app = Flask(__name__, static_folder='static')
 
@@ -14,19 +14,19 @@ def home():
 
 @app.route('/twitter', methods=['GET', 'POST'])
 def twitter():
-    # if request.method == 'POST':
+    # if request.method == 'POST': 
     username = request.form['search_box1']
     print(username)
     return render_template('twitter.html', data=json.dumps(sample_data),data2=sample_data['userData'])
-    # try:
+    #try:
+    #    userdata,tweets = top_tweets([username])
+    #    data = json.loads(tweets)
+    #except FileNotFoundError:
     #     userdata,tweets = top_tweets([username])
     #     data = json.loads(tweets)
-    # except FileNotFoundError:
-    #     userdata,tweets = top_tweets([username])
-    #     data = json.loads(tweets)
-    # pie_chart_data = {}
-    # pie_chart_data['mlModel'] = pie_chart_rank(data)
-    # return render_template('twitter.html', data=json.dumps(pie_chart_data),data2=userdata)
+    #pie_chart_data = {}
+    #pie_chart_data['mlModel'] = pie_chart_rank(data)
+    #return render_template('twitter.html', data=json.dumps(pie_chart_data),data2=userdata)
 
 
 if __name__ == '__main__':
