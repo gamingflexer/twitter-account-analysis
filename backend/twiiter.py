@@ -38,7 +38,7 @@ def top_tweets(username):
     data_return = data_sorted.to_json(orient='records')
 
     userinfo = json.loads(data_return)[0]
-    print(userinfo)
+    print(data_return)
     temp = userinfo['tweet']
     userinfo['tweet'] = []
     userinfo['tweet'].append(temp)
@@ -46,7 +46,7 @@ def top_tweets(username):
     for tweet in data_return2:
         userinfo['tweet'].append(tweet['tweet'])
 
-    return userinfo, data_return
+    return userinfo, json.loads(data_return)
 
 
 def g_translation_function_en(inText):
