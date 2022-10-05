@@ -32,18 +32,7 @@ sample_data = {"mlModel": {'labels': ['toxic', 'severe_toxic', 'obscene', 'threa
     "user_rt_id": "",
     "user_rt": "",
     "retweet_id": "",
-    "reply_to": [
-        {
-            "screen_name": "Rainmaker1973",
-            "name": "Massimo",
-            "id": "177101260"
-        }
-    ],
-    "retweet_date": "",
-    "translate": "",
-    "trans_src": "",
-    "trans_dest": ""
-},{
+}, {
     "id": 1571154307759603718,
     "conversation_id": "1570952805833379840",
     "created_at": "2022-09-17 20:39:12 IST",
@@ -73,10 +62,5 @@ sample_data = {"mlModel": {'labels': ['toxic', 'severe_toxic', 'obscene', 'threa
     "source": "",
     "user_rt_id": "",
     "user_rt": "",
-    "retweet_id": "",
-    "reply_to": [],
-    "retweet_date": "",
-    "translate": "",
-    "trans_src": "",
-    "trans_dest": ""
+
 }]}

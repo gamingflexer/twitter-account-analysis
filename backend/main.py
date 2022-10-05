@@ -17,11 +17,16 @@ def twitter():
     # if request.method == 'POST': 
     username = request.form['search_box1']
     print(username)
+<<<<<<< Updated upstream
     return render_template('twitter.html', data=json.dumps(sample_data),data2=sample_data['userData'])
     #try:
     #    userdata,tweets = top_tweets([username])
     #    data = json.loads(tweets)
     #except FileNotFoundError:
+=======
+    return render_template('twitter.html', data=json.dumps(sample_data),data2=json.dumps(sample_data['userData']))
+    # try:
+>>>>>>> Stashed changes
     #     userdata,tweets = top_tweets([username])
     #     data = json.loads(tweets)
     #pie_chart_data = {}
