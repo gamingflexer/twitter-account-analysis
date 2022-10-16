@@ -17,7 +17,6 @@ def home():
 def twitter():
     # if request.method == 'POST': 
     username = request.form['search_box1']
-    print(username)
     #return render_template('twitter.html', data=json.dumps(sample_data),data2=b)
     userdata,tweets = top_tweets([username])
     pie_chart_data = {}
@@ -33,4 +32,3 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=False)
-    

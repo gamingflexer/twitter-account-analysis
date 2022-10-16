@@ -28,7 +28,11 @@ Model link - ```https://drive.google.com/drive/folders/1--mapYkARlwpwYeu6oTxP7Ly
 ```
 pip install -r requirement.txt 
 ```
+## Twint Installation
 
+```
+pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+```
 ## Backend - FLASK
 
 ```
