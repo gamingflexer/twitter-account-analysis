@@ -2,7 +2,7 @@
 
 This is a project to analyze the tweets of a twitter account. It uses BERT to classify the tweets into multiple categories. The categories are as below
 
-# collab link - `https://colab.research.google.com/drive/1GZP1qv84h6iPXi695NXg3dkraecfsmVn?usp=sharing`
+### collab link - `https://colab.research.google.com/drive/1GZP1qv84h6iPXi695NXg3dkraecfsmVn?usp=sharing`
 
 ## Dataset 
 
