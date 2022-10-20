@@ -42,3 +42,10 @@ cd backend
 python main.py
 ```
 
+---
+
+1. Addd Twitter Username in the input field
+   ![](images/index.png)
+
+2. Model will predict the tweets and display the result
+   ![](images/main.png)
