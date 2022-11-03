@@ -71,12 +71,14 @@ def create_attention_masks(tokenized_and_padded_sentences):
 
     return np.asarray(attention_masks)
 
-def predict_text_class(text,MAX_LEN=64):
+def predict_text_class(text,MAX_LEN=64,single=False):
   test_input_ids = tokenize_sentences_multiclass(text, tokenizer_BERT2, MAX_LEN)
   test_input_ids = pad_sequences(test_input_ids, maxlen=MAX_LEN, dtype="long", value=0, truncating="post", padding="post")
   test_attention_masks = create_attention_masks(test_input_ids)
   test_dataset = create_dataset_multiclass((test_input_ids, test_attention_masks), batch_size=1, train=False, epochs=1)
   for i, (token_ids, masks) in enumerate(test_dataset):
     predictions = MODEL_BERT2(token_ids, attention_mask=masks).numpy()
+    if single:
+      return dict(zip(label_cols,predictions[0]*10))
     predictionDict = dict(zip(label_cols,predictions[0]))
     return predictionDict

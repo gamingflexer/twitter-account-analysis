@@ -20,14 +20,17 @@ def twitter():
     #return render_template('twitter.html', data=json.dumps(sample_data),data2=b)
     userdata,tweets = top_tweets([username])
     pie_chart_data = {}
-    pie_chart_data['mlModel'] = pie_chart_rank(tweets)
-    return render_template('twitter.html', data=json.dumps(pie_chart_data),data2=tweets)
-
+    pie_chart_data['mlModel'],sum = pie_chart_rank(tweets)
+    if sum > 0.5:
+        return render_template('twitter.html', data=json.dumps(pie_chart_data),data2=tweets)
+    else:
+        return render_template('twitter.html', data2=tweets)
+    
 @app.route('/predict_single', methods=['GET', 'POST'])
 def predict_single():
     if request.method == 'POST':
         text = request.form['textData']
-        out = predict_text_class(text)
+        out = predict_text_class(text,single=True)
         return render_template('result.html', data=[out,text])
 
 @app.route('/predict', methods=['GET', 'POST'])
