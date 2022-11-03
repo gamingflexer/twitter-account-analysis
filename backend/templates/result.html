@@ -1,0 +1,29 @@
+<DOCTYPE html>
+    <html>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .card {
+            margin: auto;
+            background: #ffffff;
+        }
+
+    </style>
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            {{data[1]}}
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">toxic : {{data[0]['toxic']}}</li>
+            <li class="list-group-item">severe_toxic : {{data[0]['severe_toxic']}}</li>
+            <li class="list-group-item">obscene : {{data[0]['obscene']}}</li>
+            <li class="list-group-item">threat : {{data[0]['threat']}}</li>
+            <li class="list-group-item">insult : {{data[0]['insult']}}</li>
+            <li class="list-group-item">identity_hate : {{data[0]['identity_hate']}}</li>
+        </ul>
+    </div>
+    </head>
+
+    </html>
+</DOCTYPE>

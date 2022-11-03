@@ -1,0 +1,49 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <style>
+            body {
+                background: #f7f7f7;
+            }
+
+            .form-box {
+                max-width: 500px;
+                margin: auto;
+                padding: 50px;
+                background: #ffffff;
+                border: 10px solid #f2f2f2;
+            }
+
+            h1,
+            p {
+                text-align: center;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+            }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="form-box">
+            <h1>Add Text Here</h1>
+            <p> <a href="https://getbootstrap.com"></a> <a href="https://www.formbucket.com"></a></p>
+            <form action="/predict_single" method="post">
+                <div class="form-group">
+                    <label for="name">Add Text Here</label>
+                    <input class="form-control" id="textData" type="text" name="textData">
+                </div>
+                <input class="btn btn-primary" type="submit" value="Submit" />
+        </div>
+        </form>
+        </div>
+    </body>
+
+    </html>
+</DOCTYPE>

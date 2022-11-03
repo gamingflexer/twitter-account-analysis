@@ -1,5 +1,5 @@
 from flask import Flask,render_template
-from backend.model import predict_text_class
+from model import predict_text_class
 from twiiter import top_tweets
 import json
 from flask import Flask, request
@@ -23,12 +23,16 @@ def twitter():
     pie_chart_data['mlModel'] = pie_chart_rank(tweets)
     return render_template('twitter.html', data=json.dumps(pie_chart_data),data2=tweets)
 
-@app.route('/predict', methods=['GET', 'POST'])
-def predict():
+@app.route('/predict_single', methods=['GET', 'POST'])
+def predict_single():
     if request.method == 'POST':
-        data = request.json()
-        out = predict_text_class(data['text'])
-        return out
+        text = request.form['textData']
+        out = predict_text_class(text)
+        return render_template('result.html', data=[out,text])
+
+@app.route('/predict', methods=['GET', 'POST'])
+def predict(): 
+    return render_template('predict.html')
 
 if __name__ == '__main__':
     app.run(debug=False)

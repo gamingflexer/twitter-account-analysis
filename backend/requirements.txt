@@ -1,7 +1,10 @@
 transformers
 keras_preprocessing
-tensorflow
+tensorflow_macos
 pandas
 numpy
 flask
 deep_translator
+async-timeout
+attrs
+fake_useragent
